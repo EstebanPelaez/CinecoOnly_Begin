@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="WEB-INF/template.xhtml">head>
+    <ui:define name="title">CineCo Only Cartelera</ui:define>
+    <ui:define name="content">
+        <h1 class="display-5 mb-3 text-center">Seleccionar Asientos</h1>
+        <div class="container" style="padding: 20px" >
+        <div class="card" style="border-color: #d3d6d8; border-radius: 15px">
+        <h:form>
+           <div class="ui-fluid p-formgrid p-grid">
+               <div class="p-field p-col-12 p-md-4">
+                   <div style="padding-left: 140px" class="row-cols-auto">
+                    <p:graphicImage url="uploads/#{informacionPeliculaBean.pelicula.imagen}" styleClass="movie-box" alt="Image Description for #{imagen}" title="#{imagen}" style="height: 250px; border-radius: 15px; min-width: 100px; margin-left: 50px" class="img" />
+                   </div>
+                  </div>
+           </div>
+        </h:form>
+        </div>
+            <div class="card" style="margin-top: 30px">
+                <h:form id="pantalla" >
+                    <p:graphicImage url="/uploads/pantalla.png" style="height: 60px; min-width: 7s00px; margin-left: 360px; margin-top: 40px; margin-bottom: 40px" class="img"/>
+                </h:form>
+                <h:form id="form" >
+                    <div style="padding-left: 240px" class="row-cols-auto">
+                      <p:button value="A-1" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="A-2" styleClass="ui-button-outlined ui-button-danger" style="margin:10px"/>
+                       <p:button value="A-3" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                       <p:button value="A-4" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="A-5" styleClass="ui-button-outlined ui-button-danger" style="margin:10px"/>
+                       <p:button value="A-6" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                       <p:button value="A-7" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                       <p:button value="A-8" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                       <p:button value="A-9" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                       <p:button value="A-10" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                    </div>
+                    <div style="padding-left: 240px" class="row-cols-auto">
+                        <p:button value="B-1" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="B- 2" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="B- 3" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="B-4" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="B-5" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="B-6" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="B-7" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="B-8" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="B-9" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="B-10" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                    </div>
+                    <div style="padding-left: 240px" class="row-cols-auto">
+                        <p:button value="C-1" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="C- 2" styleClass="ui-button-outlined ui-button-danger" style="margin:10px"/>
+                        <p:button value="C- 3" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="C-4" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="C-5" styleClass="ui-button-outlined ui-button-danger" style="margin:10px"/>
+                        <p:button value="C-6" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="C-7" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="C-8" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="C-9" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="C-10" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                    </div>
+                    <div style="padding-left: 240px" class="row-cols-auto">
+                        <p:button value="D-1" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="D-2" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="D-3" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="D-4" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="D-5" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="D-6" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="D-7" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="D-8" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="D-9" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                        <p:button value="D-10" styleClass="ui-button-outlined ui-button-danger" style="margin: 10px"/>
+                    </div>
+                </h:form>
+                <p:commandButton value="Confirmar" style="margin: 40px" styleClass="ui-button-raised" icon="pi pi-check" action="Compra.xhtml?faces-redirect=true">
+                </p:commandButton>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
+
+</html>

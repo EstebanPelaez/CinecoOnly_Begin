@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="WEB-INF/template.xhtml">
+    <ui:define name="title">CineCo Only Cartelera</ui:define>
+    <ui:define name="content">
+        <h1 class="display-5 mb-3 text-center">Información Película</h1>
+        <div class="container" style="padding: 70px" >
+            <div class="row">
+                <div class="col-lg-7 col-md-1" style="padding-left: 100px">
+                        <p:graphicImage url="uploads/#{informacionPeliculaBean.pelicula.imagen}" styleClass="movie-box" alt="Image Description for #{imagen}" title="#{imagen}" style="height: 550px;  border-radius: 15px; min-width: 400px;" class="img" />
+                    <h2 style="margin-top: 30px; font-size: 22px">Recomendaciones</h2>
+                    <div class="text-left font">Para mayores de 15 años.</div>
+                 </div>
+              <div class="col-lg-5 col-md-1" style="background-color: #e5e6e7; padding: 40px; border-radius: 15px" >
+                  <div align="left" >
+                          <h2 class="">Sinopsis</h2>
+                          <h1 class="display-6 font text-left">#{informacionPeliculaBean.pelicula.descripcion}</h1>
+                      <div class="col-lg-9 col-md-1" style="margin-top: 30px ;background-color: #e5e6e7">
+                      <h2 class="">Horarios de Función</h2>
+                          <div class="accordion-body" style="padding: 20px">
+                             <p:commandButton value="17:30 PM" styleClass="ui-button-raised"  icon="pi pi-clock" action="#{informacionPeliculaBean.SeleccionarAsiento(informacionPeliculaBean.pelicula.codigoPelicula)}">
+                             </p:commandButton>
+
+                              <p:commandButton value="19:10 PM" style="margin-left: 20px" styleClass="ui-button-raised" icon="pi pi-clock" action="#{informacionPeliculaBean.SeleccionarAsiento(informacionPeliculaBean.pelicula.codigoPelicula)}">
+                              </p:commandButton>
+                          </div>
+                      </div>
+
+                 </div>
+              </div>
+                <div class="col-lg-3 col-md-1">
+                    <div align="left">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
+</html>

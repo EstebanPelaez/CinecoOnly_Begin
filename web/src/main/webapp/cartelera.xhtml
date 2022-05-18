@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="WEB-INF/template.xhtml">
+    <ui:define name="title">CineCo Only Cartelera</ui:define>
+    <ui:define name="content">
+        <h1 class="display-5 mb-2 text-center">Cartelera</h1>
+          <p:carousel value="#{carteleraBean.cartelera}"  rows="9" var="pelicula" gridIcon="pi pi-th-large">
+              <f:facet name="header">
+                  <h5>Películas Disponibles</h5>
+              </f:facet>
+                <p:dataViewGridItem>
+                    <div class= "me-box my-3 col-lg-3 col-md-4 col-sm-6 col-12 " style="padding-left: 40px; height: 100%; width: 100%;">
+
+                        <a href="/informacionPelicula.xhtml?pelicula=#{pelicula.codigoPelicula}">
+                            <img src="/uploads/#{pelicula.imagen}" style="height: 450px; border-radius: 15px;min-width: 300px;" class="img" alt="..." />
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">#{pelicula.nombre}</h5>
+                           <hr />
+                            <p:commandButton value="Ver detalle" styleClass="ui-button-raised" icon="pi pi-arrow-right" iconPos="right" action="#{carteleraBean.irADetalle(pelicula.codigoPelicula)}"/>
+                        </div>
+                    </div>
+                </p:dataViewGridItem>
+          </p:carousel>
+
+    </ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition template="WEB-INF/template.xhtml">
+
+    <ui:define name="title">CineCo Only</ui:define>
+        <ui:define name="content">
+             <h1 class="display-5 mb-3 text-center">En Cartelera Hoy</h1>
+            <h:form id="fsorm">
+                <div class="card">
+                    <p:carousel value="#{carteleraBean.cartelera}" var="pelicula" gridIcon="pi pi-th-large">
+                        <f:facet name="header">
+                            <h5>Algunas de las Películas que están en Cartelera</h5>
+                        </f:facet>
+                        <div style="padding: 10px">
+                            <div class="product-item-content">
+                                <div class="p-mb-3">
+                                    <a href="cartelera.xhtml?faces-redirect=true" style="border: #d3d6d8">
+                                        <img src="/uploads/#{pelicula.imagen}" style="height: 550px;min-width: 400px;" class="img" alt="..." />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </p:carousel>
+                </div>
+            </h:form>
+            <h1 style="margin-top: 30px" class="display-5 mb-3 text-center">Próximos Estrenos</h1>
+            <h:form id="form">
+                <div class="card">
+                    <p:carousel value="#{carteleraBean.proximosEstrenos}" var="pelicula" gridIcon="pi pi-th-large">
+                        <f:facet name="header">
+                            <h5>Algunas de las Películas que Saldrán Proximamente</h5>
+                        </f:facet>
+                        <div style="padding: 10px">
+                            <div class="product-item-content">
+                                <div class="p-mb-3">
+                                    <img src="/uploads/#{pelicula.imagen}" style="height: 550px;min-width: 400px;" class="img" alt="..." />
+                                    <h:outputText styleClass="product-badge " style="padding: 15px; border-radius: 15px; background-color: yellow"
+                                                  value=" Próximamente. "/>
+                                </div>
+                            </div>
+                        </div>
+                    </p:carousel>
+                </div>
+            </h:form>
+          <ui:define name="content"></ui:define>
+    </ui:define>
+
+</ui:composition>
+</html>
