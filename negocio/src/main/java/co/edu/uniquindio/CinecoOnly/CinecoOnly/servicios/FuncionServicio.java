@@ -1,6 +1,5 @@
 package co.edu.uniquindio.CinecoOnly.CinecoOnly.servicios;
 
-import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Asiento;
 import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Funcion;
 import co.edu.uniquindio.CinecoOnly.CinecoOnly.entidades.Pelicula;
 

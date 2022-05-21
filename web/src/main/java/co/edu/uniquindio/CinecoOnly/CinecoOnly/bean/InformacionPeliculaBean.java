@@ -33,7 +33,7 @@ public class InformacionPeliculaBean{
             try {
                 pelicula = funcionServicio.obtenerPelicula(codigo);
             } catch (Exception e) {
-                e.printStackTrace();
+                e.getMessage();
             }
         }
 

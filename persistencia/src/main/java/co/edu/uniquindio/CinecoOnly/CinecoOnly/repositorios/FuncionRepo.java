@@ -12,6 +12,5 @@ import java.util.List;
 public interface FuncionRepo extends JpaRepository<Funcion, Integer> {
 
     //Consultas
-    @Query("select f.pelicula from Funcion f where f.fechaFuncion >= CURRENT_DATE ")
-    List<Pelicula> listarCartelera();
+
 }

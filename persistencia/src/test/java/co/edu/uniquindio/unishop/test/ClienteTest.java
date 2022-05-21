@@ -14,14 +14,5 @@ import javax.annotation.Resource;
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class ClienteTest {
 
-    @Autowired
-    private ClienteRepo clienteRepo;
 
-    @Test
-    public void registrarCliente(){
-        Cliente cliente = new Cliente(1006290156, "Diego", "diegoa.pereaa@uqvirtual.edu.co", "123456", " ");
-        clienteRepo.save(cliente);
-        Assertions.assertNotNull(clienteRepo.findById(1006290156));
-
-    }
 }
